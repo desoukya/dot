@@ -4,6 +4,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'flazz/vim-colorschemes'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 
 let g:airline_powerline_fonts = 1
@@ -30,3 +31,4 @@ noremap <leader>wq! :wq!<cr>
 noremap <leader>qa :qa!<cr>
 noremap <leader>b :NERDTreeToggle<cr>
 noremap <leader>f :FZF<cr>
+noremap <leader>pi :PlugInstall<cr>
