@@ -37,3 +37,6 @@ source ~/dev/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
+
+# Ignore node_module fzf
+export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
