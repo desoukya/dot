@@ -1,0 +1,16 @@
+[alias]
+  aliases=!git config -l | grep '^alias' | cut -c 7- | sort
+  a = add
+  m = merge
+  b = branch
+  s = status
+  c = commit -m
+  ch = checkout
+  f = fetch origin
+  pu = pull origin
+  p = push
+  d = diff
+  cl = clone
+[user]
+  name = Amr Desouky
+  email = desoukya@gmail.com
