@@ -1,7 +1,15 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Aliases
 alias i='ionic'
 alias sr='ionic serve'
 
+export NODE_VERSION=16.7.0
 export CF_ENVIRONMENT=LOCAL
 export GCP_PROJECT=va-staging
 
@@ -39,4 +47,6 @@ source ~/dev/powerlevel10k/powerlevel10k.zsh-theme
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
 
 # Ignore node_module fzf
-export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
+# export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
+
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
