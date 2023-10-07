@@ -1,5 +1,21 @@
 https://medium.com/@jeantimex/how-to-configure-iterm2-and-vim-like-a-pro-on-macos-e303d25d5b5c
 
+https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko
+
+,b - Open Tree:
+,w - Switch betwee tree and file
+,t - new tab
+gt - navigate to previous tab
+gT - navigate to next tab
+,f - open fuzzy search
+,sh - open termina shell (similar to ,f but shows preview of file)
+,w - :w
+,q - :q!
+,wq - :wq
+,wq! - :wq!
+,qa - :qa!
+
+
 Introduction
 Every time when I got a new computer or reinstalled the macOS, the first thing I would like to do is to set up my terminal and make it look cool. There are several tools I always like to gear up for the terminal including the following:
 iTerm2
