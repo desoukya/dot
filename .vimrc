@@ -4,6 +4,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'flazz/vim-colorschemes'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 
 let g:airline_powerline_fonts = 1
@@ -17,6 +19,8 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 syntax on
+set re=0
+
 
 "" colorscheme gruvbox
 "" colorscheme monokai-chris
@@ -74,3 +78,5 @@ noremap <leader>f :FZF<cr>
 noremap <leader>t :tabnew<cr>
 "" open terminal shell
 noremap <leader>sh :term<cr>
+"" open fuzzy search (new)
+noremap <leader>sh :Files<cr>
