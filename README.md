@@ -12,7 +12,10 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 // install iTerm2
 https://iterm2.com/downloads.html
 
-// open vim and install plugins
+// open vim 
+cfv (alias in zshrc)
+
+install plugins
 :PlugInstall
 :PlugStatus
 
@@ -23,11 +26,16 @@ gt - navigate to previous tab
 gT - navigate to next tab
 ,f - open fuzzy search
 ,sh - open termina shell (similar to ,f but shows preview of file)
-,w - :w
+,ww - :w (switch between split views)
 ,q - :q!
 ,wq - :wq
 ,wq! - :wq!
 ,qa - :qa!
+,vb - visual block (multi-line select)
+,sc - toggle spell check
+  once in spell check, to navigate between highlighted words ]s (forward) or [s (backwards)
+,rn - toggle relative numbers
+,ws - toggle white space
 
 //sort lines
 ,v - highlight the lines - :sort ui
@@ -39,6 +47,26 @@ gT - navigate to next tab
 :vsplit (creates split with empty file)
 :vsplit (new file name)
 :vs is short for :vsplit
+,V - vertical split
+
+0 - (zero) naviaget to begining of line
+$ - navigate to end of line
+x - remove character cursor is on (can keep pressing x to delete repeatedly)
+dd - remove line
+
+// select text and remove
+,vb - to entire visual block
+make selection
+d
+
+// move line(s) up and down
+shift+j - move line down
+shift+k - move line up
+v (visual mode), select lines, shift+j - move block lines down
+v (visual mode), select lines, shift+k - move block lines up
+
+// jump to last selected line(s)
+gv
 
 
 Introduction
