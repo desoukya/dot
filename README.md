@@ -2,6 +2,20 @@ https://medium.com/@jeantimex/how-to-configure-iterm2-and-vim-like-a-pro-on-maco
 
 https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko
 
+1. brew upgrade (or m1/m2 run arch -arm64 brew upgrade)
+2. brew install fzf (arch -arm64 brew install fzf)
+3. brew install ripgrep (arch -arm64 brew install ripgrep)
+
+// install vim plugin manager
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+// install iTerm2
+https://iterm2.com/downloads.html
+
+// open vim and install plugins
+:PlugInstall
+:PlugStatus
+
 ,b - Open Tree:
 ,w - Switch betwee tree and file
 ,t - new tab
@@ -14,6 +28,17 @@ gT - navigate to next tab
 ,wq - :wq
 ,wq! - :wq!
 ,qa - :qa!
+
+//sort lines
+,v - highlight the lines - :sort ui
+
+//find and replace all
+:%s/TEXT_TO_FIND/TEXT_TO_REPLACE/g
+
+// split files vertically (side by side)
+:vsplit (creates split with empty file)
+:vsplit (new file name)
+:vs is short for :vsplit
 
 
 Introduction
@@ -132,7 +157,7 @@ Image for postImage for post
 To install the theme for Vim, first run the following command in iTerm2:
 $ git clone https://github.com/joshdick/onedark.vim.git ~/onedark
 $ cd ~/onedark
-$ mkdir ~/.vim/colors
+    $ mkdir ~/.vim/colors
 $ cp colors/onedark.vim ~/.vim/colors/
 $ cp autoload/onedark.vim ~/.vim/autoload/
 Then edit ~/.vimrcand add the following:
