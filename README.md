@@ -5,6 +5,7 @@ https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko
 1. brew upgrade (or m1/m2 run arch -arm64 brew upgrade)
 2. brew install fzf (arch -arm64 brew install fzf)
 3. brew install ripgrep (arch -arm64 brew install ripgrep)
+4. brew install bat (arch -arm64 brew install bat) - similar to cat but shows format (helpful when running fzf
 
 // install vim plugin manager
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -34,6 +35,8 @@ gT - navigate to next tab
 ,vb - visual block (multi-line select)
 ,sc - toggle spell check
   once in spell check, to navigate between highlighted words ]s (forward) or [s (backwards)
+  on the highlighted word, can type `z=` to see list of recommendations
+  can also do 1z= which means take first word from list and replace it 
 ,rn - toggle relative numbers
 ,ws - toggle white space
 
@@ -68,6 +71,14 @@ v (visual mode), select lines, shift+k - move block lines up
 // jump to last selected line(s)
 gv
 
+// delete entire word cursor is on from any position
+diw 
+
+// delete all characters after the cursor for current word
+dw
+
+// delete until end of line
+d$
 
 Introduction
 Every time when I got a new computer or reinstalled the macOS, the first thing I would like to do is to set up my terminal and make it look cool. There are several tools I always like to gear up for the terminal including the following:
