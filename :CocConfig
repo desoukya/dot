@@ -1,0 +1,12 @@
+{
+    "snippets.ultisnips.pythonPrompt": false,
+    "coc.preferences.formatOnSave": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "json",
+        "graphql",
+        "handlebars"
+    ]
+}
