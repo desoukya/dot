@@ -80,6 +80,24 @@ dw
 // delete until end of line
 d$
 
+// navigate to begining of file
+gg or [[
+
+// navigate to end of file
+shift+G or ]]
+
+// navigate to end of page
+ctrl+d
+
+// navigate to begining of page
+ctrl+u
+
+// navigate down in page
+shift+]
+
+// navigate up in page
+shift+[
+
 Introduction
 Every time when I got a new computer or reinstalled the macOS, the first thing I would like to do is to set up my terminal and make it look cool. There are several tools I always like to gear up for the terminal including the following:
 iTerm2
