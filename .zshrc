@@ -1,3 +1,5 @@
+export PATH="/opt/homebrew/bin:$PATH"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -8,6 +10,17 @@ fi
 # Aliases
 alias i='ionic'
 alias sr='ionic serve'
+alias ov="vim ~/.vimrc"
+alias sv="source ~/.vimrc"
+alias oz="vim ~/.zshrc"
+alias sz="source ~/.zshrc"
+alias dx-geocode="cd ~/dev/h/dx-geocode-gql && vim"
+alias dx-shop="cd ~/dev/h/dx-shop-gql && vim"
+alias dx-hotels="cd ~/dev/h/dx-hotels-gql && vim"
+alias dx-autocomplete="cd ~/dev/h/dx-autocomplete-api && vim"
+alias dx-lookups="cd ~/dev/h/dx-lookups-gql && vim"
+alias dx-shared-schema="cd ~/dev/h/dx-shared-schema && vim"
+alias dx-shared-cp="cd ~/dev/h/dx-shared-cp && vim"
 
 export NODE_VERSION=16.7.0
 export CF_ENVIRONMENT=LOCAL
