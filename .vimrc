@@ -38,11 +38,20 @@ filetype plugin indent on
 set expandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 
-"" Show trailing whitespace
-set listchars=tab:›\ ,trail:·,eol:¬,nbsp:_,extends:…,precedes:…
-set foldlevelstart=99
-set fillchars=fold:-
-nnoremap <silent> <leader>c :set nolist!<CR>
+" Reference chart of values:
+"   Ps = 0 -> blinking block
+"   Ps = 1 -> blinking block (default)
+"   Ps = 2 -> steady block
+"   Ps = 3 -> blinking underline
+"   Ps = 4 -> steady underline
+"   Ps = 5 -> blinking bar (xterm)
+"   Ps = 6 -> steady bar (xterm)
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+"" By default set relate numbers
+set relativenumber
 
 "" keep selection when reindenting
 vnoremap > >gv
@@ -51,16 +60,20 @@ vnoremap < <gv
 "" add fzf path if installed using brew
 set rtp+=/usr/local/opt/fzf
 
-" move lines up and down with ALT+J/K
-inoremap <M-H> <CMD>normal <<<CR>
-inoremap <M-L> <CMD>normal >><CR>
-inoremap <M-K> <CMD>m .-2<CR>
-inoremap <M-J> <CMD>m .+1<CR>
+" Move 1 more lines up or down in normal and visual selection modes.
+nnoremap K :m .-2<CR>==
+nnoremap J :m .+1<CR>==
+vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv
 
-vnoremap <M-K> :m '<-2<CR>gv
-vnoremap <M-J> :m '>+1<CR>gv
-vnoremap <M-H> <gv
-vnoremap <M-L> >gv
+" Toggle(!/inv invert) spell check
+nnoremap <leader>sc :setlocal spell!<CR>
+
+" Toggle(!/inv invert) relative numbers
+nnoremap <leader>rn :set relativenumber!<CR>
+
+" Toggle(!/inv invert) white space
+nnoremap <leader>ws :set list!<CR>
 
 "" Custom Key Bindings
 noremap <leader>w :w<cr>
@@ -77,6 +90,8 @@ noremap <leader>f :FZF<cr>
 "" open new tab
 noremap <leader>t :tabnew<cr>
 "" open terminal shell
-noremap <leader>sh :term<cr>
+"" noremap <leader>sh :term<cr>
 "" open fuzzy search (new)
 noremap <leader>sh :Files<cr>
+"" visual block
+noremap <leader>vb <C-v>
