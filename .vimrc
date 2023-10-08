@@ -7,6 +7,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'HerringtonDarkholme/yats.vim' "TS Syntax
 call plug#end()
 
 autocmd StdinReadPre * let s:std_in=1
