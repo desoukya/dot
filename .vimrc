@@ -61,6 +61,7 @@ set hidden
 set relativenumber
 
 let g:airline_powerline_fonts = 1
+let g:NERDTreeIgnore = ['^node_modules$']
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeMinimalUI=1
@@ -88,6 +89,8 @@ let g:coc_global_extensions = [
       \ 'coc-json'
       \ ]
 
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
 "" keep selection when reindenting
 vnoremap > >gv
 vnoremap < <gv
@@ -111,7 +114,7 @@ nnoremap <leader>rn :set relativenumber!<CR>
 nnoremap <leader>ws :set list!<CR>
 
 "" Custom Key Bindings
-noremap <leader>w :w<cr>
+noremap <leader>s :w<cr>
 noremap <leader>q :q!<cr>
 noremap <leader>wq :wq<cr>
 noremap <leader>wq! :wq!<cr>
@@ -130,3 +133,7 @@ noremap <leader>sh :term<cr>
 noremap <leader>f :Files<cr>
 "" visual block
 noremap <leader>vb <C-v>
+"" edit Coc Snippets
+noremap <leader>csnip :CocCommand snippets.editSnippets<cr>
+"" edit Coc Config and auto format on save
+noremap <leader>cconf :CocConfig<cr>
