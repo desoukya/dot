@@ -13,6 +13,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 // install iTerm2
 https://iterm2.com/downloads.html
 
+// install neovim
+arch -arm64 brew install neovim
+
 // open vim 
 cfv (alias in zshrc)
 
@@ -22,6 +25,7 @@ install plugins
 
 ,b - Open Tree:
 ,w - Switch betwee tree and file
+,s - Save file (and auto format)
 ,t - new tab
 gt - navigate to previous tab
 gT - navigate to next tab
@@ -39,6 +43,7 @@ gT - navigate to next tab
   can also do 1z= which means take first word from list and replace it 
 ,rn - toggle relative numbers
 ,ws - toggle white space
+,sn - edit Coc snippets
 
 //sort lines
 ,v - highlight the lines - :sort ui
@@ -97,6 +102,18 @@ shift+]
 
 // navigate up in page
 shift+[
+
+// search for a word and navigate to all highlighted matches
+/SEARCH_TERM
+n - navigate forward
+N - navigate backward
+
+// on a variable jump to definition
+gd - go to definition
+
+// navigate to next function in file
+[m
+]m
 
 Introduction
 Every time when I got a new computer or reinstalled the macOS, the first thing I would like to do is to set up my terminal and make it look cool. There are several tools I always like to gear up for the terminal including the following:
