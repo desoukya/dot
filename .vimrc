@@ -8,6 +8,11 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'HerringtonDarkholme/yats.vim' "TS Syntax
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'airblade/vim-gitgutter'
+Plug 'ryanoasis/vim-devicons'
+Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 autocmd StdinReadPre * let s:std_in=1
@@ -91,6 +96,10 @@ let g:coc_global_extensions = [
       \ ]
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+"" cmd+/ comment line or multiple lines (requires going to iterm key bindings)
+vmap ++ <plug>NERDCommenterToggle
+nmap ++ <plug>NERDCommenterToggle
 
 "" keep selection when reindenting
 vnoremap > >gv
