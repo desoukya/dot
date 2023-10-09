@@ -17,7 +17,14 @@ https://iterm2.com/downloads.html
 arch -arm64 brew install neovim
 
 // open vim 
-cfv (alias in zshrc)
+ov (alias in zshrc)
+// source vim 
+sv (alias in zshrc)
+
+// open zsh 
+oz (alias in zshrc)
+// source zsh 
+sz (alias in zshrc)
 
 install plugins
 :PlugInstall
