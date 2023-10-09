@@ -21,6 +21,9 @@ alias dx-autocomplete="cd ~/dev/h/dx-autocomplete-api && vim"
 alias dx-lookups="cd ~/dev/h/dx-lookups-gql && vim"
 alias dx-shared-schema="cd ~/dev/h/dx-shared-schema && vim"
 alias dx-shared-cp="cd ~/dev/h/dx-shared-cp && vim"
+alias ti-dtos="cd ~/dev/ti/lib-dtos-ts && vim"
+alias ti-core="cd ~/dev/ti/lib-core-ts && vim"
+alias ti-orders="cd ~/dev/ti/serv-order-features && vim"
 
 export NODE_VERSION=16.7.0
 export CF_ENVIRONMENT=LOCAL
