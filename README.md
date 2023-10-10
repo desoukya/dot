@@ -64,6 +64,9 @@ gT - navigate to next tab
 :vs is short for :vsplit
 ,V - vertical split
 
+// split files horizontally within nerdtree (stacked)
+i - put cursor on file and click i
+
 0 - (zero) naviaget to begining of line
 $ - navigate to end of line
 x - remove character cursor is on (can keep pressing x to delete repeatedly)
