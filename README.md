@@ -122,6 +122,10 @@ gd - go to definition
 [m
 ]m
 
+// yank across files
+"ay - yank and store in `a` register
+"ap - grab contents from `a` register and paste
+
 Introduction
 Every time when I got a new computer or reinstalled the macOS, the first thing I would like to do is to set up my terminal and make it look cool. There are several tools I always like to gear up for the terminal including the following:
 iTerm2
