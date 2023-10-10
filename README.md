@@ -91,6 +91,7 @@ dw
 
 // delete until end of line
 d$
+shift+d
 
 // navigate to begining of file
 gg or [[
