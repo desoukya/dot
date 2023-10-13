@@ -7,6 +7,7 @@ https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko
 3. brew install ripgrep (arch -arm64 brew install ripgrep)
 4. brew install bat (arch -arm64 brew install bat) - similar to cat but shows format (helpful when running fzf
 5. brew install the_silver_searcher (installs :Ag command in vim which allows to search for text in dir - uses fzf)
+6. brew install tmux
 
 // install vim plugin manager
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
