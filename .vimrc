@@ -176,3 +176,11 @@ noremap <leader>csnip :CocCommand snippets.editSnippets<cr>
 noremap <leader>cconf :CocConfig<cr>
 "" search for term in directory
 noremap <leader>a :Ag<cr>
+nmap <expr> <silent> <C-d> <SID>select_current_word()
+"" vsc ctrl+d to add multiple cursors to same selected word
+function! s:select_current_word()
+  if !get(b:, 'coc_cursors_activated', 0)
+    return "\<Plug>(coc-cursors-word)"
+  endif
+  return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
+endfunc
