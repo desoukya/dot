@@ -174,3 +174,5 @@ noremap <leader>vb <C-v>
 noremap <leader>csnip :CocCommand snippets.editSnippets<cr>
 "" edit Coc Config and auto format on save
 noremap <leader>cconf :CocConfig<cr>
+"" search for term in directory
+noremap <leader>a :Ag<cr>
