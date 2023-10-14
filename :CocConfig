@@ -9,5 +9,5 @@
         "graphql",
         "handlebars"
     ],
-    "coc.preferences.jumpCommand": "vsplit" // clicking gi on a word will open it's definition in a separate window
+    "coc.preferences.jumpCommand": "vsplit" // gi or gd on a word will open it's definition in a separate window. Or use "tabe" to open in a new tab instead.
 }
