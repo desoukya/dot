@@ -8,6 +8,7 @@ https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko
 4. brew install bat (arch -arm64 brew install bat) - similar to cat but shows format (helpful when running fzf
 5. brew install the_silver_searcher (installs :Ag command in vim which allows to search for text in dir - uses fzf)
 6. brew install tmux
+7. Increase speedo of keyboard for (jk) scrolling system preferences > keyboard > key repeat rate (set fast) and delay until repeat (set short)
 
 // install vim plugin manager
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -53,6 +54,7 @@ gT - navigate to next tab
 ,rn - toggle relative numbers
 ,ws - toggle white space
 ,sn - edit Coc snippets
+ * - search for references to the word cursor is on
 
 //sort lines
 ,v - highlight the lines - :sort ui
@@ -131,6 +133,7 @@ gd - go to definition
 // yank across files
 "ay - yank and store in `a` register
 "ap - grab contents from `a` register and paste
+
 
 Introduction
 Every time when I got a new computer or reinstalled the macOS, the first thing I would like to do is to set up my terminal and make it look cool. There are several tools I always like to gear up for the terminal including the following:
