@@ -56,6 +56,12 @@ gT - navigate to next tab
 ,sn - edit Coc snippets
  * - search for references to the word cursor is on
 
+// GoTo code navigation.
+gd - go to definition
+gy - typescript definition
+gi - go to implementation
+gr - find all references
+
 //sort lines
 ,v - highlight the lines - :sort ui
 
