@@ -77,8 +77,9 @@ if (g:colors_name == 'gruvbox')
   endif
 endif
 
-set number
 set incsearch
+set ignorecase
+set number
 set hlsearch
 set backspace=indent,eol,start
 
@@ -166,8 +167,8 @@ noremap <leader>w <C-w>w
 noremap <leader>t :tabnew<cr>
 "" open terminal shell
 noremap <leader>sh :term<cr>
-"" open fuzzy search (new)
-noremap <leader>f :Files<cr>
+"" open fuzzy search (new) - use GFiles as it ignores all paths in .gitignore
+noremap <leader>f :GFiles<cr>
 "" visual block
 noremap <leader>vb <C-v>
 "" edit Coc Snippets
