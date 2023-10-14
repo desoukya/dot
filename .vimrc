@@ -17,12 +17,13 @@ Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plug 'jparise/vim-graphql'        " GraphQL syntax
+Plug 'tpope/vim-fugitive'         " see git commits
+Plug 'Rigellute/rigel'            " Riget color scheme https://github.com/Rigellute/rigel
+Plug 'mxw/vim-jsx'                " jsx highlighting for React
 call plug#end()
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -48,38 +49,12 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 
+"""" enable 24bit true color
+set termguicolors
 
-" Enable 24-bit true colors if your terminal supports it.
-if (has("termguicolors"))
-  " https://github.com/vim/vim/issues/993#issuecomment-255651605
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-
-  set termguicolors
-endif
-
-syntax on
-set re=0
-
-" Specific colorscheme settings (must come before setting your colorscheme).
-if !exists('g:gruvbox_contrast_light')
-  let g:gruvbox_contrast_light='hard'
-endif
-
-" Set the color scheme.
-colorscheme gruvbox
-set background=dark
-
-" Specific colorscheme settings (must come after setting your colorscheme).
-if (g:colors_name == 'gruvbox')
-  if (&background == 'dark')
-    hi Visual cterm=NONE ctermfg=NONE ctermbg=237 guibg=#3a3a3a
-  else
-    hi Visual cterm=NONE ctermfg=NONE ctermbg=228 guibg=#f2e5bc
-    hi CursorLine cterm=NONE ctermfg=NONE ctermbg=228 guibg=#f2e5bc
-    hi ColorColumn cterm=NONE ctermfg=NONE ctermbg=228 guibg=#f2e5bc
-  endif
-endif
+"""" enable the theme
+syntax enable
+colorscheme rigel
 
 set incsearch
 set ignorecase
@@ -98,13 +73,18 @@ set hidden
 "" By default set relate numbers
 set relativenumber
 
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
+let g:rigel_airline = 1
+let g:airline_theme = 'rigel'
+
 let g:NERDTreeIgnore = ['^node_modules$']
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeMinimalUI=1
 let g:mapleader = ","
 let g:NERDTreeShowHidden=1
+" Once vim-javascript is installed you enable flow highlighting
+let g:javascript_plugin_flow = 1
 
 " Reference chart of values:
 "   Ps = 0 -> blinking block
@@ -187,6 +167,8 @@ noremap <leader>csnip :CocCommand snippets.editSnippets<cr>
 noremap <leader>cconf :CocConfig<cr>
 "" search for term in directory
 noremap <leader>a :Ag<cr>
+"" search all open buffers/files/tabs
+nnoremap <silent><leader>l :Buffers<CR>
 "" vsc ctrl+d to add multiple cursors to same selected word
 nmap <expr> <silent> <C-d> <SID>select_current_word()
 function! s:select_current_word()
@@ -195,3 +177,5 @@ function! s:select_current_word()
   endif
   return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
 endfunc
+"" see github commits
+noremap <leader>gc :Commits<cr>
