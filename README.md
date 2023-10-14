@@ -9,6 +9,7 @@ https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko
 5. brew install the_silver_searcher (installs :Ag command in vim which allows to search for text in dir - uses fzf)
 6. brew install tmux
 7. Increase speedo of keyboard for (jk) scrolling system preferences > keyboard > key repeat rate (set fast) and delay until repeat (set short)
+8. download this file (https://github.com/Rigellute/rigel/blob/master/rigel.itermcolors) and go to iterm2 > settings > profiles > colors tab > button right import > select drop down again and click "rigel"
 
 // install vim plugin manager
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
