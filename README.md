@@ -65,7 +65,7 @@ gi - go to implementation
 gr - find all references
 
 //sort lines
-,v - highlight the lines - :sort ui
+visual mode - highlight the lines - :sort
 
 //find and replace all
 :%s/TEXT_TO_FIND/TEXT_TO_REPLACE/g
