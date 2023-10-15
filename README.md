@@ -36,6 +36,12 @@ install plugins
 :PlugInstall
 :PlugStatus
 
+// Enable Transparency
+:TransparencyEnable
+
+// Disable Transparency
+:TransparencyDisable
+
 ,b - Open Tree:
 ,w - Switch betwee tree and file
 ,s - Save file (and auto format)
