@@ -59,6 +59,10 @@ gT - navigate to next tab
  * - search for references to the word cursor is on
 ,gc - see git commits
 
+// fold block and open
+visual mode - zf (do not press escape after visual mode selection)
+to open, place cursor on folded block and press "zo"
+
 // GoTo code navigation.
 gd - go to definition
 gy - typescript definition
