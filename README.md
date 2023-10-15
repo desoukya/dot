@@ -57,6 +57,7 @@ gT - navigate to next tab
 ,ws - toggle white space
 ,sn - edit Coc snippets
  * - search for references to the word cursor is on
+,gc - see git commits
 
 // GoTo code navigation.
 gd - go to definition
