@@ -4,9 +4,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'flazz/vim-colorschemes'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+ Plug 'prettier/vim-prettier', {
+      \ 'do': 'yarn install',
+      \ 'for': ['javascript', 'typescript', 'typescriptreact', 'javascriptreact', 'graphql'] }
 Plug 'HerringtonDarkholme/yats.vim' "TS Syntax
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -15,15 +17,16 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdcommenter'
 Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'leafgarland/typescript-vim' " TypeScript syntax
-Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plug 'jparise/vim-graphql'        " GraphQL syntax
 Plug 'tpope/vim-fugitive'         " see git commits
 Plug 'Rigellute/rigel'            " Riget color scheme https://github.com/Rigellute/rigel
-Plug 'mxw/vim-jsx'                " jsx highlighting for React
 call plug#end()
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+"Setup Prettier command in .vimrc
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
