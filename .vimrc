@@ -20,6 +20,7 @@ Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'jparise/vim-graphql'        " GraphQL syntax
 Plug 'tpope/vim-fugitive'         " see git commits
 Plug 'Rigellute/rigel'            " Riget color scheme https://github.com/Rigellute/rigel
+Plug 'tribela/vim-transparent'
 call plug#end()
 
 autocmd StdinReadPre * let s:std_in=1
