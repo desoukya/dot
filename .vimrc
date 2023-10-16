@@ -21,13 +21,17 @@ Plug 'jparise/vim-graphql'        " GraphQL syntax
 Plug 'tpope/vim-fugitive'         " see git commits
 Plug 'Rigellute/rigel'            " Riget color scheme https://github.com/Rigellute/rigel
 Plug 'tribela/vim-transparent'
+Plug 'dense-analysis/ale'         " Use for linting and prettier
 call plug#end()
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-"Setup Prettier command in .vimrc
-command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+  \   'javascript': ['prettier', 'eslint'],
+  \   'typescript': ['prettier', 'eslint'],
+  \}
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -58,6 +62,7 @@ set termguicolors
 
 """" enable the theme
 syntax enable
+set re=2
 colorscheme rigel
 
 set incsearch
@@ -183,3 +188,5 @@ function! s:select_current_word()
 endfunc
 "" see github commits
 noremap <leader>gc :Commits<cr>
+"" Run prettier
+nnoremap <leader>p :ALEFix<cr>
