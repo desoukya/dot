@@ -37,10 +37,10 @@ install plugins
 :PlugStatus
 
 // Enable Transparency
-:TransparencyEnable
+:TransparentEnable
 
 // Disable Transparency
-:TransparencyDisable
+:TransparentDisable
 
 ,b - Open Tree:
 ,w - Switch betwee tree and file
