@@ -92,6 +92,7 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeMinimalUI=1
 let g:mapleader = ","
 let g:NERDTreeShowHidden=1
+let g:NERDTreeWinSize=45
 " Once vim-javascript is installed you enable flow highlighting
 let g:javascript_plugin_flow = 1
 
@@ -189,4 +190,4 @@ endfunc
 "" see github commits
 noremap <leader>gc :Commits<cr>
 "" Run prettier
-nnoremap <leader>p :ALEFix<cr>
+nnoremap <leader>r :ALEFix<cr>
