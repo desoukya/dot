@@ -191,3 +191,5 @@ endfunc
 noremap <leader>gc :Commits<cr>
 "" Run prettier
 nnoremap <leader>r :ALEFix<cr>
+"" go to file in nordtree
+nnoremap <leader>gf :NERDTreeFind<cr>
