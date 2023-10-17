@@ -71,10 +71,11 @@ visual mode - zf (do not press escape after visual mode selection)
 to open, place cursor on folded block and press "zo"
 
 // GoTo code navigation.
-gd - go to definition
-gy - typescript definition
-gi - go to implementation
-gr - find all references
+,gd - go to definition
+,gy - typescript definition
+,gi - go to implementation
+,gr - find all references
+,gf - go to file in nerd tree (:NERDTreeFind)
 
 //sort lines
 visual mode - highlight the lines - :sort
@@ -153,9 +154,6 @@ gd - go to definition
 // yank across files
 "ay - yank and store in `a` register
 "ap - grab contents from `a` register and paste
-
-// find the opened file in nerd tree
-:NERDTreeFind
 
 Introduction
 Every time when I got a new computer or reinstalled the macOS, the first thing I would like to do is to set up my terminal and make it look cool. There are several tools I always like to gear up for the terminal including the following:
