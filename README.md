@@ -12,7 +12,7 @@ https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko
 8. download this file (https://github.com/Rigellute/rigel/blob/master/rigel.itermcolors) and go to iterm2 > settings > profiles > colors tab > button right import > select drop down again and click "rigel"
 9. In gmail, search for "vim backgorund image iterm". In iterm2 > settings > profiles > window > background image and set to blending 90.
 10. brew install htop (arch -arm64 brew install htop)
-11. In Tmux, to scroll up, <tmux leader>+[
+11. In Tmux, to scroll up, `<tmux leader>+[`
 
 // install vim plugin manager
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
