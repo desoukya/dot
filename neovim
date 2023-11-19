@@ -1,0 +1,32 @@
+arch -arm64 brew install neovim
+
+neovim setup
+
+arch -arm64 brew install neovim
+    nvim —version
+
+cd ~/.config
+mkdir nvim
+touch init.lua
+mkdir lua
+cd lua
+
+mkdir desoukya
+mkdir core plugins
+
+touch plugins-setup.lua
+
+cd core
+touch colorscheme.lua keymaps.lua options.lua
+
+cd ../../..
+
+nvim init.lua
+```
+require('desoukya.core.options')
+require('desoukya.core.keymaps')
+require('desoukya.core.colorscheme')
+```
+
+cd lua/desoukya/core
+nvim options.lua
