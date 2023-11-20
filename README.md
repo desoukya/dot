@@ -2,7 +2,11 @@ https://medium.com/@jeantimex/how-to-configure-iterm2-and-vim-like-a-pro-on-maco
 
 https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko
 
+ZSH Setup
 https://www.josean.com/posts/terminal-setup
+
+To Reconfigure p10k:
+p10k configure
 
 1. brew upgrade (or m1/m2 run arch -arm64 brew upgrade)
 2. brew install fzf (arch -arm64 brew install fzf)
