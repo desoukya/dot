@@ -103,6 +103,7 @@ i - put cursor on file and click i
 $ - navigate to end of line
 x - remove character cursor is on (can keep pressing x to delete repeatedly)
 dd - remove line
+zz - center screen
 
 // select text and remove
 ,vb - to entire visual block
