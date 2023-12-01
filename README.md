@@ -13,12 +13,13 @@ p10k configure
 3. brew install ripgrep (arch -arm64 brew install ripgrep)
 4. brew install bat (arch -arm64 brew install bat) - similar to cat but shows format (helpful when running fzf
 5. brew install the_silver_searcher (installs :Ag command in vim which allows to search for text in dir - uses fzf)
-6. brew install tmux
-7. Increase speedo of keyboard for (jk) scrolling system preferences > keyboard > key repeat rate (set fast) and delay until repeat (set short)
-8. download this file (https://github.com/Rigellute/rigel/blob/master/rigel.itermcolors) and go to iterm2 > settings > profiles > colors tab > button right import > select drop down again and click "rigel"
-9. In gmail, search for "vim backgorund image iterm". In iterm2 > settings > profiles > window > background image and set to blending 90.
-10. brew install htop (arch -arm64 brew install htop)
-11. In Tmux, to scroll up, `<tmux leader>+[`. In iterm > settings > advanced > Scroll Wheel sends arrow keys when in alternate screen mode "Yes".
+6. arch -arm64 brew jesseduffield/lazygit/lazygit
+7. brew install tmux
+8. Increase speedo of keyboard for (jk) scrolling system preferences > keyboard > key repeat rate (set fast) and delay until repeat (set short)
+9. download this file (https://github.com/Rigellute/rigel/blob/master/rigel.itermcolors) and go to iterm2 > settings > profiles > colors tab > button right import > select drop down again and click "rigel"
+10. In gmail, search for "vim backgorund image iterm". In iterm2 > settings > profiles > window > background image and set to blending 90.
+11. brew install htop (arch -arm64 brew install htop)
+12. In Tmux, to scroll up, `<tmux leader>+[`. In iterm > settings > advanced > Scroll Wheel sends arrow keys when in alternate screen mode "Yes".
 
 // install vim plugin manager
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
