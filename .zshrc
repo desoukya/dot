@@ -1,4 +1,5 @@
 export PATH="/opt/homebrew/bin:$PATH"
+export PYTHON=/usr/local/opt/python@3.13/bin/python3.13
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -17,13 +18,11 @@ alias sz="source ~/.zshrc"
 alias ot="vim ~/.tmux.conf"
 alias st="tmux source-file ~/.tmux.conf"
 alias tns="tmux new -s"
-#alias t='tmux attach || tmux new-session\; new-window\; new-window'
-alias t='tmux attach || tmux new-session\; split-window -h'
-alias tls="tmux list-sessions"
+alias t="tmux attach || tmux new-session\; split-window -h"
+alias tls="tmux ls"
 alias tas="tmux attach-session -t"
 alias tds="tmux detach"
 alias tks="tmux kill-session -t"
-alias tow="tmux movew -r" 
 alias dx-geocode="cd ~/dev/h/dx-geocode-gql && vim"
 alias dx-shop="cd ~/dev/h/dx-shop-gql && vim"
 alias dx-hotels="cd ~/dev/h/dx-hotels-gql && vim"
@@ -36,14 +35,15 @@ alias ti-dtos="cd ~/dev/ti/lib-dtos-ts && vim"
 alias ti-core="cd ~/dev/ti/lib-core-ts && vim"
 alias ti-orders="cd ~/dev/ti/serv-order-features && vim"
 alias vim="nvim"
+alias phpunit="vendor/bin/phpunit"
 
 export NODE_VERSION=16.7.0
 export CF_ENVIRONMENT=LOCAL
 export GCP_PROJECT=va-staging
 
 export ZSH="/Users/desoukya/.oh-my-zsh"
-ZSH_THEME="powerlevel10k/powerlevel10k"
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
+ZSH_THEME="robbyrussell"
+plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 export NVM_DIR="$HOME/.nvm"
@@ -67,7 +67,7 @@ if [ -f '/Users/desoukya/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/desouk
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/desoukya/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/desoukya/google-cloud-sdk/completion.zsh.inc'; fi
-# source ~/dev/powerlevel10k/powerlevel10k.zsh-theme
+source ~/dev/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -77,9 +77,11 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap 
 # Ignore node_module fzf
 # export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
 if type rg &> /dev/null; then
-  # export FZF_DEFAULT_COMMAND='rg --files'
-  export FZF_DEFAULT_COMMAND='ag --nocolor --ignore e2e/* -g ""'
+  export FZF_DEFAULT_COMMAND='rg --files'
   export FZF_DEFAULT_OPTS='-m --height 50% --border'
 fi
 
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+
+# opencode
+export PATH=/Users/desoukya/.opencode/bin:$PATH
